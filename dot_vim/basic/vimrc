@@ -1,0 +1,83 @@
+" base config
+" 关闭vi兼容模式
+set nocompatible
+" 启用语法高亮
+syntax enable
+" 启用文件类型检测插件
+filetype plugin on
+" Show line number and listchars
+set list
+set nu
+set encoding=utf-8
+set title
+
+" Set default vertical split to right
+set splitright
+
+" Set soft tabs
+set tabstop=4
+set shiftwidth=4
+" set expandtab
+" set smarttab
+
+" Indent
+set ai
+set si
+
+" Show invisibles
+set listchars=eol:¬,tab:▸\ ,trail:·
+highlight NonText guifg=#4a4a59
+highlight SpecialKey guifg=#4a4a59
+
+" Set partial search and result highlighting
+set incsearch
+set hlsearch
+
+" Ignore case when searching
+set ignorecase
+set smartcase
+
+" Show matching bracets
+set showmatch
+
+" Highlight the cursor line
+set cursorline
+
+" Use Monaco as default font
+set guifont=Monaco:h12
+
+" Hide the toolbar in GUI
+set guioptions-=T
+
+" Set the colorscheme and window transparency
+colorscheme desert
+" set transparency=5
+
+" Show ruler and command visual aid
+set ruler
+set showcmd
+
+" Read file when modified outside Vim
+set autoread
+
+" search file
+" 递归查找子文件
+set path+=**
+" 展示match的文件列表
+set wildmenu
+
+" 在项目根目录生成tags文件
+" ctags -R .
+" 递归向上层寻找tags文件
+set tags=tags;/
+
+" file tree
+let g:netrw_banner=0 " 禁用没用的横幅
+let g:netrw_winsize=25 " 初始窗口大小为25%
+let g:netrw_liststyle=3 " 使用树状模式
+let g:netrw_altv=1 " 分割窗口时默认在右边
+let g:netrw_browse_split=4 " enter时在上一个窗口打开
+
+" first install vim-gui-common
+" paste and copy like ctrl-c and ctrl-v
+set clipboard=unnamedplus

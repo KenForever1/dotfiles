@@ -1,0 +1,11 @@
+vim9script
+
+source ~/.vim/basic/vimrc
+
+var is_conf_plugin = true
+
+if is_conf_plugin
+	echo "load m_plugin_config"
+    source ~/.vim/basic/m_plugin_config.vim
+endif
+
