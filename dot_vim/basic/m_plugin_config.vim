@@ -99,49 +99,62 @@ g:mru_ignore_patterns = 'fugitive\|\.git/\|\_^/tmp/'
 
 call plug#begin()
 
-	Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'preservim/nerdtree', { 'on': 'NERDTreeToggle' }
 
 # fzf
-	Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-	Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 
 # c++
-	Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 
-	Plug 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-multiple-cursors'
 # Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
-	Plug 'prabirshrestha/async.vim'
-	Plug 'prabirshrestha/asyncomplete.vim'
-	Plug 'prabirshrestha/vim-lsp'
-	Plug 'prabirshrestha/asyncomplete-lsp.vim'
-	Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
 
-	Plug 'rhysd/vim-lsp-ale'
+Plug 'rhysd/vim-lsp-ale'
 
 # theme
-	Plug 'joshdick/onedark.vim'
-	Plug 'itchyny/lightline.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'itchyny/lightline.vim'
 
 # edit
-	Plug 'tpope/vim-surround'
-	Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
 
 # async run
-	Plug 'skywind3000/asyncrun.vim'
-	Plug 'benmills/vimux'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'benmills/vimux'
 
 # recent files
-	Plug 'lvht/mru'
+Plug 'lvht/mru'
 
 # ultisnips
-	Plug 'SirVer/ultisnips'
-	Plug 'thomasfaingnaert/vim-lsp-snippets'
-	Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+Plug 'SirVer/ultisnips'
+Plug 'thomasfaingnaert/vim-lsp-snippets'
+Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+
+# ctags, gtags and escope
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'skywind3000/gutentags_plus'
 
 call plug#end()
 
 # set colorschema
-	syntax on
-	colorscheme onedark
+syntax on
+colorscheme onedark
 
+# set gtags
+# enable gtags module
+g:gutentags_modules = ['ctags', 'gtags_cscope']
+# config project root markers.
+g:gutentags_project_root = ['.root']
+# generate datebases in my cache directory, prevent gtags files polluting my project
+g:gutentags_cache_dir = expand('~/.cache/tags')
+# change focus to quickfix window after search (optional).
+g:gutentags_plus_switch = 1
