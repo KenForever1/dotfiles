@@ -14,6 +14,9 @@ set wildmenu
 
 set clipboard=unnamedplus
 
+syntax enable
+filetype plugin indent on
+
 # close quickfix list, such as after you excute :LspWorkspaceSymbols
 # :cclose
 # open quickfix list
@@ -32,7 +35,8 @@ g:ale_linters = {
 	'python': ['flake8', 'mypy', 'pylint'],
 	'c': ['gcc', 'cppcheck'],
 	'cpp': ['gcc', 'cppcheck'],
-	'text': []
+	'text': [],
+    'rust': ['analyzer', 'cargo']
 }
 
 g:ale_completion_delay = 500
@@ -142,6 +146,12 @@ Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 # ctags, gtags and escope
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'skywind3000/gutentags_plus'
+
+# rust
+#Plug 'rust-lang/rust.vim'
+
+# comment
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
