@@ -70,7 +70,7 @@ The simplest configuration for single file init.lua, supporting interaction betw
 
 ### install 
 
-[](./dot_config/nvim/readme.md)
+[nvim config doc](./dot_config/nvim/readme.md)
 
 ## vim config dependences
 
