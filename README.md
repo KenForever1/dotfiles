@@ -49,8 +49,24 @@ rm ~/.config/nvim
 ```
 
 + atuin
+
+fish config, edit ~/.config/fish/config.fish
+
+```
+if status is-interactive
+    # Commands to run in interactive sessions can go here
+    atuin init fish | source
+end
+```
+
 + rustup
 + tmux
+
+## nvim config interface
+
+The simplest configuration for single file init.lua, supporting interaction between LSP and AI prompt.
+
+![](./doc/nvim_interface.jpg)
 
 ## vim config dependences
 
@@ -65,3 +81,4 @@ rm ~/.config/nvim
 + lazygit
 + nvim 9.4+ (config with lazyvim)
 + npm
+
