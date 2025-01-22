@@ -68,6 +68,10 @@ The simplest configuration for single file init.lua, supporting interaction betw
 
 ![](./doc/nvim_interface.jpg)
 
+### install 
+
+[](./dot_config/nvim/readme.md)
+
 ## vim config dependences
 
 + vim 9.0+
