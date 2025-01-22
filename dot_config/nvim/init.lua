@@ -281,7 +281,7 @@ require("lazy").setup({
 			auto_suggestions_provider = "openai", -- Since auto-suggestions are a high-frequency operation and therefore expensive, it is recommended to specify an inexpensive provider or even a free provider: copilot
 			openai = {
 				-- endpoint = "https://api.openai.com/v1",
-				endpoint = "http://llms-se.baidu-int.com:8200",
+				endpoint = "http://llms-se.xxxx.com:8200",
 				model = "gpt-4o",
 				timeout = 30000, -- Timeout in milliseconds
 				temperature = 0,
