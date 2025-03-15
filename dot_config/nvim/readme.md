@@ -78,6 +78,19 @@ fc-list
 
 wsl2中ubuntu安装kitty的方法：[](https://github.com/danielbisar/settings/blob/main/guides/kitty-on-windows-with-wsl2.md)
 
+如果遇到打开报错：
+```
+[074 17:55:58.927171] [glfw error 65544]: Wayland: Failed to connect to display
+GLFW initialization failed
+```
+
+```
+https://github.com/glfw/glfw/issues/1390
+I removed glfw-wayland.so in /lib/kitty/kitty and run kitty. Then problem solved
+```
+
+配置文件：
+
 ```bash
 $ cat ~/.config/kitty/kitty.conf
 font_size 20.0
