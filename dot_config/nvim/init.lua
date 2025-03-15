@@ -441,8 +441,8 @@ require("lazy").setup({
 	{
 		'junegunn/fzf.vim',
 		dependencies = {
-			-- { 'junegunn/fzf', dir = '~/.fzf', build = './install --all' },
-			{ 'junegunn/fzf', dir = '/usr/bin/' },
+			{ 'junegunn/fzf', dir = '~/.fzf', build = './install --all' },
+			-- { 'junegunn/fzf', dir = '/usr/bin/' },
 		},
 		config = function()
 			-- stop putting a giant window over my editor

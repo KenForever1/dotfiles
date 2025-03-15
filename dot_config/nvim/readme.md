@@ -42,6 +42,26 @@ apt install fzf
 which fzf
 ```
 
+推荐采用git clone安装到.fzf中，
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+
+# ~/.fzf/install
+# 在init.lua配置中，会自动执行安装
+# { 'junegunn/fzf', dir = '~/.fzf', build = './install --all' },
+```
+
++ copy paste 配置
+
+ubuntu 安装wl-clipboard:
+
+```bash
+sudo apt install wl-clipboard
+```
+<ctrl-c>: copy
+<ctrl-p>：paste
+
+macos 使用pbpaste和pbcopy
 
 + 安装字体CodeNewRomanNerdFontMono
 
