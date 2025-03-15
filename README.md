@@ -13,6 +13,11 @@ ubuntu linux install example:
 apt install fish
 ```
 
+set as default shell
+```bash
+sudo chsh -s /usr/bin/fish
+```
+
 + ripgrep
 
 + fd
@@ -39,6 +44,7 @@ chezmoi diff
 install by fish:
 
 ```bash
+GITHUB_USERNAME=KenForever1
 curl -fsLS get.chezmoi.io | sh -c 'sh -s -- init --apply git@github.com:'$GITHUB_USERNAME'/dotfiles.git'
 ```
 
